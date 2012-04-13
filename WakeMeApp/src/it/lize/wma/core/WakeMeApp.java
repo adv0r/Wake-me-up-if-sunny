@@ -26,10 +26,8 @@ public class WakeMeApp {
 			
 			} catch (ParseException e) {
 			e.printStackTrace();
-			}
-		
+			}		
 
-		
 		}
 		else
 		{
