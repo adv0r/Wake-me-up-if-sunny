@@ -45,7 +45,8 @@ public class Alarm {
 			  int hours   = (int) ((timeLeft / (1000*60*60)) % 24);
 			 	
 			  Timer timer = new Timer();
-			  timer.schedule(at,alarmTime.getTime() );
+			  
+			  timer.schedule(at,new Date(alarmTime.getTime()));
 			  System.out.println("Timeleft : "+hours+"h and "+minutes+" mins");
 			  System.out.println("I will wake you up only if is sunny outside in "+location+"! Sleep tight");
 
