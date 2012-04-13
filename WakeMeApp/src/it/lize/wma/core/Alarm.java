@@ -48,7 +48,7 @@ public class Alarm {
 			  
 			  timer.schedule(at,new Date(alarmTime.getTime()));
 			  System.out.println("Timeleft : "+hours+"h and "+minutes+" mins");
-			  System.out.println("I will wake you up only if is sunny outside in "+location+"! Sleep tight");
+			  System.out.println("I will wake you up only if is sunny outside in "+location+"! Sleep tight!\n zzz...");
 
 		  }
 		  else System.out.println("Error:I can't wake you up in the past : alarm date and time has already passed");

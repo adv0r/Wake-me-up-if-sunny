@@ -20,7 +20,7 @@ public class WeatherService {
 	
 	public WeatherConditions getWeatherConditions(String location)
 	{
-		String conditionsXML = getFileFromURL(Global.API_URL+location);
+		String conditionsXML = getFileFromURL(Global.API_URL+location.replace(" ", "%20"));
 		long time = Calendar.getInstance().getTimeInMillis();
 		return new ParserXML().getWeatherConditions(conditionsXML,time,location);
 	}

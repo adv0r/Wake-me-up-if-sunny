@@ -25,11 +25,7 @@ public class AlarmTask extends TimerTask {
 		WeatherConditions wc = ws.getWeatherConditions(location);
 		
 		String currentCondition = wc.getDescription() ;
-		double temp = wc.getTemp_c();
-		System.out.println("//WakeMeApp \n "
-				+"Time : " + wc.getCurrentTime()
-				+"\nCurrent Conditions in "+wc.getLocation() +" : " + currentCondition
-				+"\nTemperature : "+ temp +"¡C" );
+		System.out.println(wc.getConditions());
 		
 		String[] acceptedDescription = {"Clear"};
 		
@@ -42,7 +38,11 @@ public class AlarmTask extends TimerTask {
 			}
 		}
 		if (ring) ringTheAlarm();
-		else System.out.println("Is not worth waking up today! I'm not going to ring the alarm!");
+		else 
+			{
+			System.out.println("#############\n\nIs not worth waking up today! I'm not going to ring the alarm!\n CYA");
+			
+			}
 	}
 	
 	
@@ -51,14 +51,14 @@ public class AlarmTask extends TimerTask {
 		try {
 			input = new FileInputStream(Global.ALARM);
 			Player player = new Player(input);
-			System.out.println("Urka urka sbirulero oggi splende il sol!  Buongiorno!");
+			System.out.println("#############\n\nSveglia!!!\nUrka urka sbirulero oggi splende il sol!  Buongiorno!");
 			player.play();
 			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 
-		//System.exit(0);  //TODO checkit
+		System.exit(0);  //TODO checkit
 		
 	}
 
