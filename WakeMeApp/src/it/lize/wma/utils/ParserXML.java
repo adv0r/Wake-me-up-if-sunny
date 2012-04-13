@@ -33,7 +33,8 @@ public class ParserXML {
 			wind =subStr4.substring("wind_condition data=\"Wind:\"".length()+1, subStr4.indexOf("/>")-1) ;
 		}
 		catch (Exception e) {
-			e.printStackTrace();
+			System.err.println("Where the hell is "+location);
+			System.exit(0);
 		}
 		
 		return new WeatherConditions(description, temp_c, time, location,humidity,wind);
