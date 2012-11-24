@@ -7,7 +7,7 @@ import java.util.Timer;
 public class Alarm {
 	private Date alarmTime;
 	private String location;
-	
+	//this comments doesn't make sense
 	public Alarm(Date alarmTime,String location) {
 		super();
 		this.alarmTime = alarmTime;
@@ -43,16 +43,16 @@ public class Alarm {
 
 			  int minutes = (int) ((timeLeft / (1000*60)) % 60);
 			  int hours   = (int) ((timeLeft / (1000*60*60)) % 24);
-			 	
+
 			  Timer timer = new Timer();
-			  
+
 			  timer.schedule(at,new Date(alarmTime.getTime()));
 			  System.out.println("Timeleft : "+hours+"h and "+minutes+" mins");
 			  System.out.println("I will wake you up only if is sunny outside in "+location+"! Sleep tight!\n zzz...");
 
 		  }
 		  else System.out.println("Error:I can't wake you up in the past : alarm date and time has already passed");
-		
+
 	}
 
 }
